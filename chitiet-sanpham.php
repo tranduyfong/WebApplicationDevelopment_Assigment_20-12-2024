@@ -27,7 +27,7 @@
                         <?php echo $row['TenSanPham']; ?>
                     </div>
                     <div class="quantity-sold">
-                        Đã bán <span>999</span> sản phẩm
+                        Đã bán <span><?php echo $row['SoLuongBan'] ?></span> sản phẩm
                         <img src="/BaiTapLon/image/menu_icon_3.png" alt="">
                     </div>
                     <div class="price">

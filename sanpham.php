@@ -48,19 +48,19 @@
                                 <div class="inner-fill">
                                     <p>Loại: </p>
                                     <div>
-                                        <input type="radio" name="loai_san_pham" value="A%" id="type1">
+                                        <input type="radio" name="loai_san_pham" value="ao" id="type1">
                                         <label for="type1">Áo</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="loai_san_pham" value="Q%" id="type2">
+                                        <input type="radio" name="loai_san_pham" value="quan" id="type2">
                                         <label for="type2">Quần</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="loai_san_pham" value="GD%" id="type3">
+                                        <input type="radio" name="loai_san_pham" value="giaydep" id="type3">
                                         <label for="type3">Giày, Dép</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="loai_san_pham" value="L%" id="type4">
+                                        <input type="radio" name="loai_san_pham" value="lego" id="type4">
                                         <label for="type4">Lego</label>
                                     </div>
                                 </div>

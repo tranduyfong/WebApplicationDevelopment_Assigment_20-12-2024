@@ -4,7 +4,15 @@
     
     if (!empty($_POST['loai_san_pham'])) {
         $loaiSanPham = $_POST['loai_san_pham'];
-        $sql .= " AND MaSanPham LIKE '$loaiSanPham'";
+        if($loaiSanPham == "ao") {
+            $sql .= " AND LoaiSanPham = 'ao'";
+        } elseif($loaiSanPham == "quan") {
+            $sql .= " AND LoaiSanPham = 'quan'";
+        } elseif($loaiSanPham == "giaydep") {
+            $sql .= " AND LoaiSanPham = 'giaydep'";
+        } elseif($loaiSanPham == "lego") {
+            $sql .= " AND LoaiSanPham = 'lego'";
+        }
     }
     
     if (!empty($_POST['gia_san_pham'])) {
