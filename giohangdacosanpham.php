@@ -22,7 +22,7 @@
                 echo '
                     <div class="single-product">
                     <div class="cancel">
-                                <a href="">
+                                <a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=xulyxoagiohangsanpham&id='.$row['MaGioHang'].'">
                                     <i class="fa-solid fa-xmark"></i>
                                 </a>
                             </div>
@@ -35,11 +35,11 @@
                                 <div id="quantity">Số lượng mua: '.$row['SoLuongMua'].'</div>
                             </div>
                             <div class="product-price">
-                                Giá bán: <span>'.substr(substr(strval($row['GiaSanPham']), 0, 6), 0, 3).".". substr(substr(strval($row['GiaSanPham']), 0, 6), 3, 6)."₫".'</span>
+                                Giá bán: <span>'.number_format($row['Gia'], 0, ',', '.')."₫".'</span>
                             </div>
                             <div class="product-choice">
                                 <a href="" id="buy-now">Mua ngay</a>
-                                <a href="" id="more-information">Xem thông tin</a>
+                                <a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=chitiet-sanpham&id='.$row['MaSanPham'].'" id="more-information">Xem thông tin</a>
                             </div>
                         </div>
                 ';

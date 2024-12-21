@@ -110,6 +110,9 @@
                     case 'giohang':
                         include('giohang.php');
                         break;
+                    case 'xulyxoagiohangsanpham':
+                        include('xulyxoagiohangsanpham.php');
+                        break;
                 }
             } else {
                 include('trangchu.php');

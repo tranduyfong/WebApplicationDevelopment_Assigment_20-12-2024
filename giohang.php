@@ -14,9 +14,17 @@
             <div class="inner-cart">
                 <?php
                     include("connect.php");
-                    $sql_checked_num_rows = "SELECT * FROM `giohang`";
-                    $result = mysqli_query($conn, $sql_checked_num_rows);
+                    // Lay id phien dang nhap hien tai
                     session_start();
+                    $idUserName = $_SESSION['username'];
+                    $sql_get_id_username = "SELECT `MaNguoiDung` FROM `nguoidung` WHERE `TenDangNhap` = '$idUserName'";
+                    $result = mysqli_query($conn, $sql_get_id_username);
+                    $row = mysqli_fetch_assoc($result);
+                    $getIdUserName = $row['MaNguoiDung'];
+
+                    $sql_checked_num_rows = "SELECT * FROM `giohang` WHERE `MaNguoiDung` = '$getIdUserName'";
+                    
+                    $result = mysqli_query($conn, $sql_checked_num_rows);
                     if((mysqli_num_rows($result) < 1) || empty($_SESSION['username'])) {
                         include('giohangtrong.php');
                     } else {
