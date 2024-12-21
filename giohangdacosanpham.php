@@ -38,7 +38,7 @@
                                 Giá bán: <span>'.number_format($row['Gia'], 0, ',', '.')."₫".'</span>
                             </div>
                             <div class="product-choice">
-                                <a href="" id="buy-now">Mua ngay</a>
+                                <a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=thongtinmuahang&id='.$row['MaSanPham'].'&id_user='.$getIdUserName.'&id_cart='.$row['MaGioHang'].'&size_product='.$row['KichCo'].'" id="buy-now">Mua ngay</a>
                                 <a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=chitiet-sanpham&id='.$row['MaSanPham'].'" id="more-information">Xem thông tin</a>
                             </div>
                         </div>

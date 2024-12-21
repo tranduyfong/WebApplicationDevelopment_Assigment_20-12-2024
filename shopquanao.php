@@ -113,6 +113,15 @@
                     case 'xulyxoagiohangsanpham':
                         include('xulyxoagiohangsanpham.php');
                         break;
+                    case 'thongtinmuahang':
+                        include('thongtinmuahang.php');
+                        break;
+                    case 'xulythongtinmuahang':
+                        include('xulythongtinmuahang.php');
+                        break;
+                    case 'huydonhang':
+                        include('huydonhang.php');
+                        break;
                 }
             } else {
                 include('trangchu.php');

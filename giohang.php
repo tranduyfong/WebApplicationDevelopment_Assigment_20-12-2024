@@ -14,8 +14,11 @@
             <div class="inner-cart">
                 <?php
                     include("connect.php");
-                    // Lay id phien dang nhap hien tai
                     session_start();
+                    // Lay id phien dang nhap hien tai
+                    if(empty($_SESSION['username'])) {
+                        include('giohangtrong.php');
+                    } else {
                     $idUserName = $_SESSION['username'];
                     $sql_get_id_username = "SELECT `MaNguoiDung` FROM `nguoidung` WHERE `TenDangNhap` = '$idUserName'";
                     $result = mysqli_query($conn, $sql_get_id_username);
@@ -30,6 +33,7 @@
                     } else {
                         include('giohangdacosanpham.php');
                     }
+                }
                 ?>
             </div>
         </div>

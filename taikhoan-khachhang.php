@@ -50,6 +50,7 @@
                                         include('thongtincanhan.php');
                                         break;  
                                     case 'thongtindonhang':
+                                        include('thongtindonhang.php');
                                         break;
                                     case 'thaydoithongtin':
                                         include('thaydoithongtin.php');

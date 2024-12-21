@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="show-position">
+        <div class="show-position">
             <span>Bạn có câu hỏi gì ?</span>
         </div>
         <div class="main-support">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-to-contact">
                         <h3>Liên hệ với chúng tôi</h3>
-                        <form action="" class="inner-form-to-contact">
+                        <form action="xulylienhe.php" class="inner-form-to-contact" method="post">
                             <input type="text" name="ho_ten" id="fullName" placeholder="Họ tên*">
                             <input type="text" name="email" id="email" placeholder="Email*">
                             <input type="text" name="so_dien_thoai" id="numberPhone" placeholder="Số điện thoại*">

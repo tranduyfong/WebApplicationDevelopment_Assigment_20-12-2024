@@ -9,9 +9,11 @@
             margin-bottom: 20px;
             font-size: 150%;
             position: relative;
-            display: flex;
             gap: 30px;
             text-align: center;
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
         }
         .left {
             margin-left: 20%;
