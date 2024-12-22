@@ -24,10 +24,12 @@
                 if (move_uploaded_file($file['tmp_name'], $targetFile)) {
                     $targetFile = substr($targetFile, 15);
 
+                    // Câu lệnh truy vấn check tồn tại tên sản phẩm 
                     $sql_check_product_name = "SELECT MaSanPham FROM sanpham WHERE TenSanPham = '$nameProduct'";
                     $result_check_product_name = mysqli_query($conn, $sql_check_product_name);
                     $variable_checked_product = mysqli_num_rows($result_check_product_name) > 0;
                     
+                    // Check xem tồn tại sản phẩm với size mình chọn
                     $variable_checked_product_size = false;
                     if ($variable_checked_product) {
                         $row_check_product_name = mysqli_fetch_assoc($result_check_product_name);
@@ -38,15 +40,16 @@
                         $variable_checked_product_size = mysqli_num_rows($result_check_size) > 0;
                     }
                     
+                    // Kiểm tra
                     if ($variable_checked_product) {
-                        if ($variable_checked_product_size) {
+                        if ($variable_checked_product_size) { // Nếu đã tồn tại tên và size, thực hiện update số lượng
                             $sql_updated = "UPDATE `chitietsanpham` SET `SoLuongTonKho`='$quantityProduct' WHERE `MaSanPham` = '$idProduct' AND `KichCo` = '$sizeProduct'";
                             mysqli_query($conn, $sql_updated);
-                        } else {
+                        } else { // Nếu đã tồn tại tên mà chưa tồn tại size, thực hiện thêm size và số lượng cho bảng chitietdonhang
                             $sql_add_size = "INSERT INTO `chitietsanpham`(`MaSanPham`, `KichCo`, `SoLuongTonKho`) VALUES ('$idProduct','$sizeProduct','$quantity')";
                             mysqli_query($conn, $sql_add_size);
                         }
-                    } else {
+                    } else { // Nếu chưa tồn tại sản phẩm, thực hiện thêm sản phẩm
                         $sql = "INSERT INTO `sanpham`(`TenSanPham`, `GiaSanPham`, `ThongTinSanPham`, `filePath`, `LoaiSanPham`) VALUES ('$nameProduct','$costProduct','$infoProduct','$targetFile', '$typeProduct')";
                         mysqli_query($conn, $sql);
                     
@@ -58,7 +61,6 @@
                         $sql_2 = "INSERT INTO `chitietsanpham`(`MaSanPham`, `KichCo`, `SoLuongTonKho`) VALUES ('$idProduct','$sizeProduct','$quantity')";
                         mysqli_query($conn, $sql_2);
                     }
-                    
                 } else {
                     echo "Lỗi khi upload file.";
                 }

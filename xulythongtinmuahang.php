@@ -40,10 +40,18 @@
         $sql_update = "UPDATE `chitietsanpham` SET `SoLuongTonKho`='$quantity_after' WHERE `MaSanPham`='$currentIdProduct' AND `KichCo` = '$currentSizeProduct'";
         mysqli_query($conn, $sql_update);
 
+        //Update số lượng mua
+        $sql_order_quantity = "SELECT * FROM sanpham WHERE `MaSanPham` = '$currentIdProduct'";
+        $result_order_quantity = mysqli_query($conn, $sql_order_quantity);
+        $row_order_quantity = mysqli_fetch_assoc($result_order_quantity);
+        $quantity_order = intval($row_order_quantity['SoLuongBan']) + intval($quantity);
+        $sql_update_ordered_quantity = "UPDATE `sanpham` SET `SoLuongBan`='$quantity_order' WHERE `MaSanPham` = '$currentIdProduct'";
+        mysqli_query($conn, $sql_update_ordered_quantity);
+
         echo 
                 '<script>
                 alert("Mua hàng thành công !");
-                window.location.href = "http://localhost/BaiTapLon/shopquanao.php?page_layout=thongtindonhang";
+                window.location.href = "http://localhost/BaiTapLon/shopquanao.php?page_layout=taikhoan-khachhang&inner_layout=thongtindonhang";
                 </script>';
     }
 ?>

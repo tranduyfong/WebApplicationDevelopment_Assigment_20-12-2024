@@ -60,3 +60,5 @@ sizeXL.addEventListener('click', ()=> {
     sizeM.style.color = '#333';
 });
 
+
+

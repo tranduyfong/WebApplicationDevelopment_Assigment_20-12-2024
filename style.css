@@ -19,6 +19,7 @@ header {
     display: flex;
     gap: 30px;
     z-index: 1000;
+    top: 0%;
     justify-content: space-around;
 }
 header .logo {
@@ -195,7 +196,7 @@ header .list-select .inner-list-select .single-icon a {
     width: 80%;
     display: flex;
     gap: 40px;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .seeding .list-seeding .item {
@@ -203,7 +204,6 @@ header .list-select .inner-list-select .single-icon a {
     background-color: white;
     height: 300px;
     display: flex;
-    flex-grow: 1;
     border-radius: 10px;
 }
 .seeding .list-seeding .item .left {
@@ -495,7 +495,7 @@ header .list-select .inner-list-select .single-icon a {
 /* Trang chủ đăng nhập */
 .layout-username {
     width: 100%;
-    height: 800px;
+    height: max-content;
     display: flex;
 }
 .layout-username .list-user-choice {
@@ -505,6 +505,7 @@ header .list-select .inner-list-select .single-icon a {
     justify-content: center;
     align-items: center;
     border-right: 1px solid #3333332d;
+    border-bottom: 1px solid #3333332d ;
 }
 .layout-username .list-user-choice .inner-list-user-choice {
     width: 80%;
@@ -550,6 +551,7 @@ header .list-select .inner-list-select .single-icon a {
 }
 /* Right */
 .layout-username .main-user-choice {
+    margin: 40px 0px;
     width: 70%;
     height: 100%;
     display: flex;
@@ -651,7 +653,8 @@ header .list-select .inner-list-select .single-icon a {
 }
 .products-main .inner-products-main .banner {
     width: 100%;
-    height: 180px;
+    display: flex;
+    height: max-content;
     margin-bottom: 100px;
     margin-top: 20px;
 }
