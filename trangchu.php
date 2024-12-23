@@ -28,10 +28,110 @@
         .shop-information img {
             width: 100%;
             height: 100%;
+            transition: 0.2s all ease-in-out;
+        }
+        .shop-information img:hover {
+            transform: scale(1.05);
         }
         .shop-information div {
             text-align: center;
             margin-top: 30px;
+        }
+        .member {
+            width: 100%;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .member h1 {
+            margin: 0;
+            padding-top: 30px;
+        }
+        .container {
+            height: 50vh;
+            min-width: 600px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+        .border {
+            position: relative;
+            height: 342px;
+            width: 260px;
+            background: transparent;
+            border-radius: 15px;
+            border: 2px solid #fff;
+            opacity: 0;
+            transition: 1s ease;
+        }
+        .border:hover {
+            opacity: 1;
+        }
+        .card {
+            position: relative;
+            height: 379px;
+            width: 300px;
+            background-color: #808080;
+            margin: 30px;
+            border-radius: 20px;
+            transition: .8s ease;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card0 {
+            background: url(/BaiTapLon/image/tranduyphong2.jpg) center center no-repeat;
+            background-size: 300px;
+        }
+        .card0:hover {
+            background: url(/BaiTapLon/image/tranduyphong2.jpg) left center no-repeat;
+            background-size: 500px;
+        }
+        .card1 {
+            background: url(/BaiTapLon/image/nguyenchinh.jpg) center center no-repeat;
+            background-size: 300px;
+        }
+        .card1:hover {
+            background: url(/BaiTapLon/image/nguyenchinh.jpg) left center no-repeat;
+            background-size: 500px;
+        }
+        .card2 {
+            background: url(/BaiTapLon/image/dangvanminh.jpg) center center no-repeat;
+            background-size: 300px;
+        }
+        .card2:hover {
+            background: url(/BaiTapLon/image/dangvanminh.jpg) left center no-repeat;
+            background-size: 500px;
+        }
+        .card3 {
+            background: url(/BaiTapLon/image/nguyenvankien2.jpg) center center no-repeat;
+            background-size: 300px;
+        }
+        .card3:hover {
+            background: url(/BaiTapLon/image/nguyenvankien2.jpg) left center no-repeat;
+            background-size: 500px;
+        }
+        .card4 {
+            background: url(/BaiTapLon/image/nguyenleminhanh.jpg) center center no-repeat;
+            background-size: 300px;
+        }
+        .card4:hover {
+            background: url(/BaiTapLon/image/nguyenleminhanh.jpg) left center no-repeat;
+            background-size: 500px;
+        }
+        h2 {
+            position: absolute;
+            bottom: 130px;
+            left: 25px;
+            width: 15px;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+            text-shadow: 0 0  10px rgba(0, 0, 0, .5);
         }
     </style>
 </head>
@@ -163,6 +263,38 @@
             </div>
             <img src="/BaiTapLon/image/chau-bui.png" alt="">
         </div>
+        
+        <div class="member">
+            <h1>MEMBER ASSIGMENT</h1>
+        </div>
+        <div class="container">
+            <div class="card card0">
+                <div class="border">
+                    <h2>Trần Duy Phong</h2>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="border">
+                    <h2>Nguyễn Đức Chính</h2>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="border">
+                    <h2>Đặng Văn Minh</h2>
+                </div>
+            </div>
+            <div class="card card3">
+                <div class="border">
+                    <h2>Nguyễn Văn Kiên</h2>
+                </div>
+            </div>
+            <div class="card card4">
+                <div class="border">
+                    <h2>Nguyễn Lê Minh Anh</h2>
+                </div>
+            </div>
+        </div>            
+
         <script>
             const images = document.querySelectorAll('.banner-image');
             let currentIndex = 0;
