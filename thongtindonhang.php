@@ -84,18 +84,31 @@
                                             <h3>'.$row['TenSanPham'].'</h3>
                                             <div>Số lượng: '.$row['SoLuongDatHang'].'</div>
                                             <div>Kích cỡ: '.$row['KichCo'].' </div>
-                                            <div>Giá: '.$row['GiaTien'].'</div>
+                                            <div>Giá: '.number_format($row['GiaTien'], 0, ',', '.').'đ'.'</div>
                                             <div>Địa chỉ:'.$row['DiaChiDatHang'].' </div>
                                             <div>Tình trang: Đang xử lý...</div>
                                         </div>
                                         <div class="right">
                                             <div><a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=chitiet-sanpham&id='.$row['MaSanPham'].'" id="see-product">Xem thông tin sản phẩm</a></div>
-                                            <div><a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=huydonhang&id='.$row['MaDatHang'].'" id="cancel" onclick="return confirm(\Bạn có chắc chắn muốn xóa không?/);">Hủy đơn hàng</a></div>
+                                            <div><a href="http://localhost/BaiTapLon/shopquanao.php?page_layout=huydonhang&id='.$row['MaDatHang'].'" id="cancel">Hủy đơn hàng</a></div>
+                                            
                                         </div>
                                     </div>
                                 </div>
-                            '
+                            ';
                     ?>
                     <?php } ?>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            document.querySelectorAll('#cancel').forEach(button => {
+                                button.addEventListener('click', (e) => {
+                                    if (!confirm('Bạn có chắc chắn muốn xóa không?')) {
+                                        e.preventDefault();
+                                    }
+                                });
+                            });
+                        });
+                    </script>
 </body>
 </html>
