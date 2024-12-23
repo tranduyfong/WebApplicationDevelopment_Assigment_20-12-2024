@@ -122,6 +122,9 @@
                     case 'huydonhang':
                         include('huydonhang.php');
                         break;
+                    case 'xulyxoasanpham':
+                        include('xulyxoasanpham.php');
+                        break;
                 }
             } else {
                 include('trangchu.php');

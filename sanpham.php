@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .left {
+            position: sticky;
+            top: 10%;
+            display: flex;
+        }
         .fill-button {
             text-align: center;
             height: 30px;

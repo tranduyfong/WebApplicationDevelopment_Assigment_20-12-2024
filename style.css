@@ -506,6 +506,8 @@ header .list-select .inner-list-select .single-icon a {
     align-items: center;
     border-right: 1px solid #3333332d;
     border-bottom: 1px solid #3333332d ;
+    position: sticky;
+    top: 10%;
 }
 .layout-username .list-user-choice .inner-list-user-choice {
     width: 80%;

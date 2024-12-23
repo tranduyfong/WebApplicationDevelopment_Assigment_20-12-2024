@@ -1,6 +1,6 @@
 <?php
     include("connect.php");
-    $idProduct = $_POST['ma_san_pham'];
+    $idProduct = $_GET['id'];
 
     if(isset($idProduct)){
         $sql_checked = "SELECT * FROM `sanpham` WHERE `MaSanPham` = '$idProduct'";

@@ -100,10 +100,14 @@
                     <?php } ?>
 
                     <script>
+                        // Đảm bảo chạy khi mà đoạn mã đã được load hết
                         document.addEventListener('DOMContentLoaded', () => {
+                            // Lấy các phần tử có id là cancel
                             document.querySelectorAll('#cancel').forEach(button => {
+                                // Gán sự kiện onclcick cho từng dòng sản phẩm
                                 button.addEventListener('click', (e) => {
                                     if (!confirm('Bạn có chắc chắn muốn xóa không?')) {
+                                        // Chặn xóa khi người dùng nhấn hủy bỏ
                                         e.preventDefault();
                                     }
                                 });
