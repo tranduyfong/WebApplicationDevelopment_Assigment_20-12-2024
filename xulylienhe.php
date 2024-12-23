@@ -1,6 +1,14 @@
 <?php
     include("connect.php");
     
+    session_start();
+    if(empty($_SESSION['username'])) {
+        echo '<script>
+                    alert("Vui lòng đăng nhập tài khoản !");
+                    window.location.href = "http://localhost/BaiTapLon/shopquanao.php?page_layout=dangnhap";
+                </script>';
+    }
+        
     if(empty($_POST['ho_ten']) || empty($_POST['email']) || empty($_POST['so_dien_thoai']) || empty($_POST['them_thong_tin'])) {
         echo        '<script>
                             alert("Vui lòng nhập đủ thông tin !");
